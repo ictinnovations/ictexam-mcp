@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "ictexam": {
+      "command": "npx",
+      "args": ["-y", "ictexam-mcp"],
+      "env": {
+        "ICTEXAM_BASE_URL": "https://app.ictlms.net",
+        "ICTEXAM_EMAIL": "teacher@example.com",
+        "ICTEXAM_PASSWORD": "your-password"
+      }
+    }
+  }
+}

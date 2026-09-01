@@ -1,0 +1,76 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ictinnovations/ictexam-mcp",
+  "description": "Read exams, gradebooks and item analysis from an ICTExam server, and parse papers with AI and publish exams when writes are enabled.",
+  "repository": {
+    "url": "https://github.com/ictinnovations/ictexam-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "websiteUrl": "https://www.ictlms.net",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "ictexam-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "ICTEXAM_BASE_URL",
+          "description": "Base URL of your ICTExam site, e.g. https://app.ictlms.net (no trailing /api).",
+          "isRequired": true,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "ICTEXAM_EMAIL",
+          "description": "A teacher or admin account email.",
+          "isRequired": true,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "ICTEXAM_PASSWORD",
+          "description": "Password for the account.",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "ICTEXAM_API_PREFIX",
+          "description": "Path the API is mounted under. Defaults to /api (behind the usual reverse proxy). Set empty to talk to the backend port directly.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string",
+          "default": "/api"
+        },
+        {
+          "name": "ICTEXAM_MCP_ALLOW_WRITE",
+          "description": "Unlocks the write tools: parse a paper with AI (spends server AI credit), publish and unpublish exams. When false these tools are not registered at all. Leave off unless you mean it.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "ICTEXAM_TIMEOUT_MS",
+          "description": "Per request timeout in milliseconds. Defaults to 60000 (AI parsing can be slow).",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "number",
+          "default": "60000"
+        },
+        {
+          "name": "ICTEXAM_TLS_INSECURE",
+          "description": "Skip TLS certificate verification. Only for a self-signed test server.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "boolean",
+          "default": "false"
+        }
+      ]
+    }
+  ]
+}
