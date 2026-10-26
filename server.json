@@ -6,13 +6,13 @@
     "url": "https://github.com/ictinnovations/ictexam-mcp",
     "source": "github"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://www.ictlms.net",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "ictexam-mcp",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "transport": {
         "type": "stdio"
       },

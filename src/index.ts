@@ -25,7 +25,7 @@ try {
 if (cfg.tlsInsecure) process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 const server = new McpServer(
-  { name: "ictexam-mcp", version: "0.1.0" },
+  { name: "ictexam-mcp", version: "0.1.1" },
   {
     instructions:
       "Read and manage exams on an ICTExam server. Start with ictexam_list_exams to find an exam's " +

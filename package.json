@@ -1,6 +1,6 @@
 {
   "name": "ictexam-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "mcpName": "io.github.ictinnovations/ictexam-mcp",
   "description": "Model Context Protocol server for ICTExam. Lets AI assistants read exams, gradebooks and item analysis, and (when writes are enabled) parse a question paper with AI and publish exams.",
   "type": "module",
@@ -47,8 +47,8 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "zod": "^3.25.0"
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
